@@ -1,1 +1,10 @@
-<img src="assets/logo.svg" alt="Bmorekarefulbilling" width="160">
+<!-- Header logo with SVG + PNG fallback -->
+<picture>
+  <source srcset="assets/logo.svg" type="image/svg+xml">
+  <img src="assets/logo.png" alt="Bmorekarefulbilling Logo" width="160" height="auto" loading="eager" decoding="async">
+</picture>
+
+<!-- Favicons (also relative) -->
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/logo.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
