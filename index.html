@@ -186,95 +186,53 @@
     <div class="container">
       <h2>Client Portal – Intake Form</h2>
       <div class="card">
-        <form method="POST" action="<form
-  action="https://formspree.io/f/myzlgqbl"
-  method="POST"
->
-  <label>
-    Your email: bmorekarefulbill@yahoo.com
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+       <form method="POST" action="https://formspree.io/f/mgvrwjpj" accept-charset="UTF-8">
+  <input type="hidden" name="_subject" value="New Intake — Bmorekarefulbilling">
+  <input type="hidden" name="_template" value="table">
+
+  <div class="row">
+    <div>
+      <label for="name">Full Name</label>
+      <input id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" required>
+    </div>
+    <div>
+      <label for="practice">Practice / Organization</label>
+      <input id="practice" name="practice" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label for="specialty">Specialty</label>
+      <select id="specialty" name="specialty">
+        <option>Primary Care</option>
+        <option>Behavioral Health</option>
+        <option>Dental</option>
+        <option>Physical Therapy</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div>
+      <label for="emr">EMR / Billing System</label>
+      <input id="emr" name="emr">
+    </div>
+  </div>
+
+  <div>
+    <label for="notes">What services do you need?</label>
+    <textarea id="notes" name="notes" rows="5"></textarea>
+  </div>
+
+  <button type="submit">Submit Intake</button>
 </form>
-          <div class="row">
-            <div>
-              <label for="name">Full Name</label>
-              <input id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@practice.com" required>
-            </div>
-          </div>
-          <div class="row">
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" placeholder="410‑279‑1464" required>
-            </div>
-            <div>
-              <label for="practice">Practice / Organization</label>
-              <input id="practice" name="practice" placeholder="Practice name" required>
-            </div>
-          </div>
-          <div class="row">
-            <div>
-              <label for="specialty">Specialty</label>
-              <select id="specialty" name="specialty">
-                <option>Primary Care</option>
-                <option>Behavioral Health</option>
-                <option>Dental</option>
-                <option>Physical Therapy</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label for="emr">EMR / Billing System</label>
-              <input id="emr" name="emr" placeholder="Epic, Kareo, Waystar, IDX, etc.">
-            </div>
-          </div>
-          <div>
-            <label for="notes">What services do you need?</label>
-            <textarea id="notes" name="notes" rows="5" placeholder="Tell us about your needs (e.g., claim submission, denial management, RCM, patient billing)"></textarea>
-          </div>
-          <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
-            <button type="submit">Submit Intake</button>
-            <span class="small">We’ll reply within 24 hours.</span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container grid cols-2">
-      <div class="card contact-block">
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+14102791464">410-279-1464</a></p>
-        <p><strong>Location:</strong> Baltimore, Maryland</p>
-        <p class="small">Business hours: Mon–Fri, 9am–5pm ET</p>
-      </div>
-      <div class="card">
-        <h2>Why practices choose us</h2>
-        <ul>
-          <li>99% claim accuracy goal</li>
-          <li>Fast submission & diligent follow‑up</li>
-          <li>Transparent reporting & insights</li>
-          <li>Personalized, responsive support</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Bmorekarefulbilling LLC. All Rights Reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
