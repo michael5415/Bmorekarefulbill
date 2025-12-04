@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BmoreKarefulBilling LLC — Revenue Integrity & ASC360™</title>
-  <meta name="description" content="Revenue integrity, risk adjustment, Medicaid & Medicare Advantage, and ASC360™ revenue intelligence. We uncover underpayments, fix denials, and protect government program revenue." />
+  <meta name="description" content="Revenue integrity, risk adjustment, Medicaid & Medicare Advantage, and ASC360™ revenue intelligence for pain management and orthopedic providers. We uncover underpayments, fix denials, and protect government program revenue." />
   <meta property="og:title" content="BmoreKarefulBilling LLC — Revenue Integrity & ASC360™" />
   <meta property="og:description" content="Risk adjustment, Medicaid & Medicare Advantage compliance, denial prevention, and ASC360™ revenue intelligence for specialty practices." />
   <meta property="og:type" content="website" />
@@ -251,28 +251,6 @@
       letter-spacing:.12em;
     }
 
-    /* Image strip */
-    .image-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      margin-top:14px;
-    }
-    @media(max-width:960px){.image-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:640px){.image-grid{grid-template-columns:1fr}}
-    .image-card img{
-      width:100%;
-      height:210px;
-      border-radius:14px;
-      object-fit:cover;
-      display:block;
-    }
-    .image-card p{
-      margin:8px 2px 0;
-      font-size:.88rem;
-      color:#4b5563;
-    }
-
     /* ASC360 highlight */
     .asc-highlight{
       display:grid;
@@ -346,6 +324,8 @@
       color:var(--brand);
     }
     .price-note{font-size:.85rem;color:#6b7280;margin-top:4px}
+    .list{margin:8px 0 0;padding-left:18px;font-size:.88rem;color:#4b5563}
+    .list li+li{margin-top:3px}
 
     /* Intake form */
     form input, form textarea{
@@ -394,6 +374,11 @@
       margin-top:32px;
       font-size:.85rem;
     }
+    .footer-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:8px;
+    }
+    .footer-inner a{color:#e5e7eb}
 
     /* Floating CTA */
     .float-cta{
@@ -410,10 +395,6 @@
       box-shadow:0 15px 40px rgba(15,118,110,.8);
     }
     .float-cta:hover{transform:translateY(-1px)}
-
-    /* Reveal animation */
-    .reveal{opacity:0;transform:translateY(18px);transition:all .55s ease}
-    .reveal.visible{opacity:1;transform:none}
   </style>
 </head>
 <body>
@@ -442,37 +423,38 @@
       <div class="container hero-inner">
         <div>
           <div class="badge"><span></span> Revenue Integrity • Government Programs</div>
-          <h1 class="reveal">Revenue integrity & ASC360™ that make underpayments impossible to ignore.</h1>
-          <p class="reveal" style="transition-delay:.08s">
-            BmoreKarefulBilling LLC helps pain management, orthopedics, and high-acuity practices protect Medicaid, Medicare Advantage, and commercial revenue using real revenue intelligence—not just basic billing.
+          <h1>Revenue integrity & ASC360™ that make underpayments impossible to ignore.</h1>
+          <p>
+            BmoreKarefulBilling LLC helps pain management, orthopedics, and high-acuity specialty practices
+            protect Medicaid, Medicare Advantage, and commercial revenue using real revenue intelligence—not just basic billing.
           </p>
-          <div class="pill-row reveal" style="transition-delay:.12s">
+          <div class="pill-row">
             <div class="pill">Risk Adjustment</div>
             <div class="pill">Medicaid & MA Compliance</div>
             <div class="pill">Denial Recovery</div>
             <div class="pill">Underpayment Detection</div>
           </div>
-          <div class="actions reveal" style="transition-delay:.16s">
+          <div class="actions">
             <a class="btn btn-primary" href="#intake">Start Intake</a>
             <a class="btn btn-secondary" href="asc360.html">Learn about ASC360™</a>
           </div>
-          <div class="hero-metrics reveal" style="transition-delay:.2s">
+          <div class="hero-metrics">
             <div class="metric">
               <b>30–90 days</b>
-              Timeframe where we typically surface measurable underpayments.
+              Window where we typically surface measurable underpayments.
             </div>
             <div class="metric">
               <b>3–5 payors</b>
-              Deep-dive focus first: Medicaid, MA, and key commercial plans.
+              Deep-dive first on Medicaid, MA, and key commercial plans.
             </div>
             <div class="metric">
               <b>100% mapped</b>
-              Every encounter tied back to rules, auth, and contract logic.
+              Each encounter tied back to rules, auth, and contract logic.
             </div>
           </div>
         </div>
 
-        <aside class="hero-card reveal" style="transition-delay:.14s">
+        <aside class="hero-card">
           <div class="hero-tag">For specialty practices serious about government programs</div>
           <h3>We’re not a generic billing vendor.</h3>
           <div class="hero-list">
@@ -501,16 +483,234 @@
     <section id="services">
       <div class="container">
         <div class="section-eyebrow">Services</div>
-        <h2 class="reveal">Revenue integrity for Medicaid, Medicare Advantage, and specialty payors.</h2>
-        <p class="lead reveal">We sit between your clinical reality and payor rules to make sure your work is documented, coded, billed, and defended correctly.</p>
+        <h2>Revenue integrity for Medicaid, MA, and specialty payors.</h2>
+        <p class="lead">
+          We sit between your clinical reality and payor rules to make sure your work is documented, coded, billed, and defended correctly.
+        </p>
 
         <div class="grid cols-3" style="margin-top:16px">
-          <div class="card reveal">
+          <div class="card">
             <span class="chip">Risk Adjustment</span>
             <h3>Risk Score Integrity</h3>
-            <p>Align documentation and coding so risk scores accurately reflect your patient population.</p>
-            <ul>
-              <li>Chart review and HCC capture audits</li>
+            <p>Align documentation and coding so risk scores accurately reflect your population.</p>
+            <ul class="list">
+              <li>Chart review & HCC capture audits</li>
               <li>RAF leakage identification</li>
               <li>Provider documentation coaching</li>
-           
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="chip">Government Programs</span>
+            <h3>Medicaid & MA Compliance</h3>
+            <p>Align encounters and billing with state Medicaid, MA, and plan-specific rules.</p>
+            <ul class="list">
+              <li>Encounter structure & routing checks</li>
+              <li>Policy-based denial analysis</li>
+              <li>State & plan-specific documentation rules</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="chip">Denials & Underpayments</span>
+            <h3>Denial Recovery & Prevention</h3>
+            <p>Fix recurring issues that are eroding your margin—by code, payor, and policy.</p>
+            <ul class="list">
+              <li>Root-cause denial trend analysis</li>
+              <li>Underpayment identification & recovery strategy</li>
+              <li>Playbooks for staff to prevent repeat issues</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASC360 Highlight -->
+    <section id="asc360">
+      <div class="container">
+        <div class="section-eyebrow">ASC360™</div>
+        <h2>ASC360™ — Pain & Ortho revenue intelligence for ASCs and OBLs.</h2>
+        <p class="lead">
+          ASC360™ is a dedicated model for Pain Management and Orthopedic surgery. It focuses on high-yield CPT families where payors underpay, deny, or quietly change rules.
+        </p>
+
+        <div class="asc-highlight">
+          <div class="asc-main">
+            <h3>What makes ASC360™ different.</h3>
+            <p>
+              Instead of only asking “was the claim paid?”, ASC360™ asks “was it paid correctly based on codes, contracts, LCDs, and site of service?”
+            </p>
+            <div class="asc-pills">
+              <div class="asc-pill">TFESI, RFA, ESI</div>
+              <div class="asc-pill">Arthroscopy & implants</div>
+              <div class="asc-pill">MPPR & bundling logic</div>
+              <div class="asc-pill">Encounter-level integrity</div>
+            </div>
+            <div class="asc-metrics">
+              <div class="asc-metric">
+                <b>Pain Management</b>
+                <div>TFESI, RFA, ESI, sedation add-ons benchmarked across payors and sites of service.</div>
+              </div>
+              <div class="asc-metric">
+                <b>Orthopedics</b>
+                <div>Knee & shoulder scopes, ACL, and joints tracked for carve-outs and discount errors.</div>
+              </div>
+            </div>
+            <div class="actions" style="margin-top:16px">
+              <a href="asc360.html" class="btn btn-primary">View ASC360™ Details</a>
+            </div>
+          </div>
+
+          <div class="asc-side">
+            <div>
+              <h4>How centers use ASC360™</h4>
+              <p style="font-size:.9rem;margin:4px 0 10px">
+                Most clients use ASC360™ in parallel with their internal billing team or existing vendor.
+              </p>
+              <ul class="list">
+                <li>Validate payments against expected logic.</li>
+                <li>Prepare data-driven payor conversations.</li>
+                <li>Inform staffing, workflows, and technology decisions.</li>
+              </ul>
+            </div>
+            <div style="margin-top:12px;font-size:.86rem;color:#cbd5f5">
+              Want a dedicated pain/ortho view of your center?  
+              <br/>👉 <strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com" style="color:#e0f2fe">bmorekarefulbill@yahoo.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-eyebrow">Pricing</div>
+        <h2>Simple, transparent ways to work together.</h2>
+        <p class="lead">
+          Start with a focused audit, or plug BmoreKarefulBilling into your ongoing revenue operations.
+        </p>
+
+        <div class="grid cols-3" style="margin-top:16px">
+          <div class="card">
+            <span class="chip">Ongoing</span>
+            <h3>Revenue Integrity Support</h3>
+            <div class="price-big">Custom monthly retainer</div>
+            <p class="price-note">For practices and ASCs that need ongoing guidance.</p>
+            <ul class="list">
+              <li>Monthly denial & underpayment review.</li>
+              <li>Targeted education for front-end & clinical teams.</li>
+              <li>Regular reporting for leadership & boards.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="chip">ASC360™</span>
+            <h3>ASC360™ Subscription</h3>
+            <div class="price-big">$6,500 / month</div>
+            <p class="price-note">Best for high-volume pain & ortho ASCs and OBLs.</p>
+            <ul class="list">
+              <li>Monthly ASC360™ analytics & dashboards.</li>
+              <li>Payor trend analysis & contract insights.</li>
+              <li>Executive-ready summary each quarter.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="chip">Audit / Recovery</span>
+            <h3>Audits & Recovery</h3>
+            <div class="price-big">Flat or contingency</div>
+            <p class="price-note">Scope defined around your data and goals.</p>
+            <ul class="list">
+              <li>Focused code family & payor audits.</li>
+              <li>Underpayment recovery projects.</li>
+              <li>Short-term engagements with defined deliverables.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intake -->
+    <section id="intake">
+      <div class="container">
+        <div class="section-eyebrow">Intake</div>
+        <h2>Start your intake.</h2>
+        <p class="lead">
+          Share a few details about your practice, payors, and pain/ortho mix. We’ll respond within 24 hours with next steps.
+        </p>
+
+        <div class="card">
+          <form method="POST" action="https://formspree.io/f/mgvrwjpj" accept-charset="UTF-8">
+            <div class="form-row">
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">Work Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-top:12px">
+              <div>
+                <label for="org">Practice / ASC / OBL Name</label>
+                <input id="org" name="organization" type="text" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" value="410-279-1464" />
+              </div>
+            </div>
+
+            <div style="margin-top:12px">
+              <label for="message">What are you looking for help with?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Example: We’re a pain & ortho ASC in Maryland with high denials on TFESI and scopes, we want ASC360™ to audit the last 6–12 months."></textarea>
+            </div>
+
+            <div style="margin-top:14px">
+              <button type="submit">Submit Secure Intake</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-eyebrow">Contact</div>
+        <h2>Contact BmoreKarefulBilling LLC.</h2>
+        <p class="lead">
+          Ready for a data-driven conversation about your revenue, risk scores, and payor behavior?
+        </p>
+
+        <div class="card contact-line">
+          <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:14102791464">410-279-1464</a></p>
+          <p><strong>Location:</strong> Baltimore, MD (serving multi-state providers virtually)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating CTA -->
+  <a href="#intake" class="float-cta">Start Intake</a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> BmoreKarefulBilling LLC · Revenue Integrity & ASC360™</div>
+      <div>
+        📧 <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a> ·
+        📱 <a href="tel:14102791464">410-279-1464</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
