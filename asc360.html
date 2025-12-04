@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASC360™ – Pain & Ortho Revenue Intelligence | BmoreKarefulBilling LLC</title>
+  <meta name="description" content="ASC360™ is BmoreKarefulBilling LLC’s proprietary revenue intelligence system for Pain Management and Orthopedic ASCs and OBLs. Detect underpayments, prevent denials, and optimize payer contracts." />
+
+  <style>
+    :root{
+      --brand:#050b26;
+      --accent:#00a8b5;
+      --accent-soft:rgba(0,168,181,.14);
+      --ink:#111827;
+      --muted:#f5f8fa;
+      --card:#ffffff;
+      --ring:rgba(0,168,181,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--muted);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{text-decoration:none;color:var(--accent)}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Header / Nav */
+    .topbar{
+      position:sticky;top:0;z-index:40;
+      background:rgba(5,11,38,.97);
+      backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid rgba(148,163,184,.2);
+      color:#fff;
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:800;color:#fff;
+    }
+    .brand-logo{
+      width:30px;height:30px;border-radius:9px;
+      background:radial-gradient(circle at 20% 0%,#00a8b5,#0a1a3f);
+      display:grid;place-items:center;
+      font-size:16px;color:#fff;
+      font-weight:900;
+    }
+    .links{
+      display:flex;align-items:center;gap:18px;
+      font-size:.95rem;
+    }
+    .links a{color:#e5e7eb;opacity:.9;font-weight:600}
+    .links a:hover{opacity:1}
+    .nav-cta{
+      background:var(--accent);
+      color:#fff !important;
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+    }
+    @media(max-width:760px){
+      .links{display:none}
+    }
+
+    /* Sections */
+    section{padding:60px 0}
+    h1,h2,h3{margin:0 0 8px}
+    h1{font-size:clamp(2.1rem,3vw,2.7rem);color:var(--brand)}
+    h2{font-size:1.9rem;color:var(--brand)}
+    .section-eyebrow{
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#6b7280;
+      margin-bottom:4px;
+    }
+    .lead{
+      color:#4b5563;
+      max-width:720px;
+      margin:0 0 16px;
+      font-size:1rem;
+    }
+    .grid{display:grid;gap:18px}
+    .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media(max-width:900px){.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:720px){.cols-2,.cols-3{grid-template-columns:1fr}}
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:18px 18px 16px;
+      box-shadow:0 10px 30px rgba(15,23,42,.06);
+      border:1px solid #e5e7eb;
+    }
+    .card h3{font-size:1.05rem;color:#111827}
+    .card p{font-size:.93rem;color:#4b5563}
+
+    .chip{
+      display:inline-block;
+      padding:4px 9px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:#0f766e;
+      font-size:.75rem;
+      font-weight:650;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:6px;
+    }
+
+    .pill-row{
+      display:flex;flex-wrap:wrap;gap:8px;
+      margin:10px 0 0;
+      font-size:.8rem;
+    }
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.45);
+      color:#0f172a;
+      background:#f9fafb;
+    }
+
+    .hero-block{
+      background:#050b26;
+      color:#e5e7eb;
+      border-radius:18px;
+      padding:26px 22px 22px;
+      box-shadow:0 18px 45px rgba(15,23,42,.9);
+      border:1px solid rgba(148,163,184,.4);
+    }
+    .hero-block h1{color:#f9fafb;margin-bottom:8px}
+    .hero-block p{color:#e5e7eb;font-size:.98rem}
+    .hero-metrics{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin-top:18px;
+      font-size:.8rem;
+    }
+    .metric{
+      padding:10px 12px;
+      border-radius:10px;
+      background:rgba(15,23,42,.85);
+      border:1px solid rgba(148,163,184,.55);
+    }
+    .metric b{display:block;font-size:1.05rem}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:10px 16px;
+      border-radius:10px;
+      border:none;
+      cursor:pointer;
+      font-size:.93rem;
+      font-weight:750;
+    }
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{
+      background:transparent;
+      color:#e5e7eb;
+      border:1px solid rgba(148,163,184,.7);
+    }
+
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+
+    /* Tables */
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:.8rem;
+      min-width:520px;
+    }
+    th,td{
+      padding:6px 8px;
+      border-bottom:1px solid #e5e7eb;
+      text-align:left;
+    }
+    th{
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#6b7280;
+    }
+    tbody tr:hover td{background:#f9fafb}
+
+    .table-wrap{
+      border-radius:14px;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      padding:12px 12px 10px;
+      box-shadow:0 10px 30px rgba(15,23,42,.06);
+      overflow-x:auto;
+    }
+    .badge-pill{
+      display:inline-block;
+      padding:3px 8px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:#0f766e;
+      font-size:.7rem;
+      font-weight:650;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+    /* Footer */
+    footer{
+      background:#020617;
+      color:#e5e7eb;
+      padding:20px 0 26px;
+      margin-top:40px;
+      font-size:.85rem;
+    }
+    .footer-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:8px;
+    }
+    .footer-inner a{color:#e5e7eb}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <div class="brand-logo">BK</div>
+        <span>BmoreKarefulBilling LLC</span>
+      </a>
+      <nav class="links">
+        <a href="/">Home</a>
+        <a href="#focus">Focus</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/#i
